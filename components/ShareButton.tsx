@@ -3,12 +3,14 @@ import copy from "copy-to-clipboard";
 
 interface ShareProps {
     gameOver: boolean;
+    moves : number;
+    average : number;
 }
 
 function ShareButton(props: ShareProps) {
 
     function copyShareText() {
-        copy('')
+        copy('I did todays Switcheroodle in')
     }
 
     return (
