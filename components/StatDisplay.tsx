@@ -3,6 +3,8 @@ import { ShareButton } from './ShareButton';
 
 interface ShareProps {
     gameOver: boolean;
+    average: number;
+    moves: number;
 }
 
 function StatDisplay(props: ShareProps) {
@@ -34,7 +36,7 @@ function StatDisplay(props: ShareProps) {
     </div>
     <div>
         {
-        <ShareButton gameOver={props.gameOver}/>
+        <ShareButton gameOver={props.gameOver} moves={props.moves} average={props.average}/>
 }
     </div>
         </div>

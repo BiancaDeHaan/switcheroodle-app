@@ -25,7 +25,8 @@ function Game() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [averageScore, setAverageScore] = useState<number>(0);
 
-    function showInfoPopup() {
+
+    function showGameWonPopup() {
         setIsOpen(true);
     }
 
@@ -150,7 +151,7 @@ function Game() {
         localStorage.setItem('average', JSON.stringify(average));
 
         setGameOver(true);
-        showInfoPopup();
+        showGameWonPopup();
     }
 
     function createToast(text: string) {
@@ -206,7 +207,7 @@ function Game() {
 
     return (
         <div className="game">
-            <TopNav gameOver={gameOver}/>
+            <TopNav gameOver={gameOver} average={averageScore} moves={history.length}/>
             <hr />
             <ToastContainer />
             {gameOver && isOpen && <SmallPopup

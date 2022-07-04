@@ -5,6 +5,8 @@ import Image from 'next/image'
 
 interface ShareProps {
     gameOver: boolean;
+    average: number;
+    moves: number;
 }
 
 function StatButton(props: ShareProps) {
@@ -24,7 +26,7 @@ function StatButton(props: ShareProps) {
                 content={<>
                     <h2 className="popup-title"><b>Statistics</b></h2><div className="popup-text">
                     <hr className="bar" />
-                    <StatDisplay gameOver={props.gameOver}/>
+                    <StatDisplay gameOver={props.gameOver} moves={props.moves} average={props.average}/>
                     </div>
                 </>}
                 handleClose={togglePopup}

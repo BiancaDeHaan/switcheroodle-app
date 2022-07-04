@@ -4,6 +4,8 @@ import {StatButton} from './StatButton';
 
 interface ShareProps {
   gameOver: boolean;
+  average: number;
+  moves: number;
 }
 
 function TopNav(props: ShareProps) {
@@ -14,7 +16,7 @@ function TopNav(props: ShareProps) {
             </div>
             <Title />
             <div >
-              <StatButton gameOver={props.gameOver}/>
+              <StatButton gameOver={props.gameOver} moves={props.moves} average={props.average}/>
             </div>
         </div>
       )
