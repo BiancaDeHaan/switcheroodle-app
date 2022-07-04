@@ -10,18 +10,8 @@
   }
 
   .submit-button {
-    color: darkcyan;
-    border-radius: 10px;
-    margin-left: 2em;
-    padding: 1em;
-  }
-  
-  .submit-button:hover {
-    background-color: lavender;
-  }
-  
-  .submit-button:active {
-    background-color: plum;
+    cursor: pointer;
+    padding-top: .5em;
   }
 
   .bar {

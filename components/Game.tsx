@@ -6,6 +6,9 @@ import { Word } from './game/Word';
 import { toast, ToastContainer } from "react-toastify";
 import {SmallPopup} from './SmallPopup';
 import 'react-toastify/dist/ReactToastify.css';
+import submitButton from './../public/submit.png';
+import Image from 'next/image'
+
 
 type WordsData = {
     words: string[];
@@ -122,7 +125,7 @@ function Game() {
 
         // Set current word
         setCurrentWord(guess);
-        localStorage.setItem('current-word', currentWord);
+        localStorage.setItem('current-word', guess);
 
         // Check for victory
         if (guess === goal) {
@@ -212,9 +215,7 @@ function Game() {
             <CurrentWord current={currentWord} />
             <hr className="bar" />
             <Word word={currentGuess} />
-            <form onSubmit={handleSubmitButton}>
-                <input type="submit" value="Submit" />
-            </form>
+            <Image className="submit-button" src={submitButton} alt='submit-button' onClick={handleSubmitButton} />
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
