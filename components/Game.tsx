@@ -41,8 +41,6 @@ function Game() {
         const nresponse = await fetch("/api/validwords");
         const ndata = await nresponse.json();
         setValidWords(ndata);
-        console.log(ndata);
-        console.log(validWords);
     };
 
     useEffect(() => {
@@ -103,7 +101,6 @@ function Game() {
         for (var i = 0; i < 5; i++) {
             if (guess.charAt(i) !== currentWord.charAt(i))
                 count++;
-            console.log(count);
         }
         if (count !== 1) {
             createToast('Only change 1 character at a time!')
@@ -111,7 +108,6 @@ function Game() {
         }
 
         // Valid word
-        console.log(validWords);
         const copyValidWords: string[] = validWords.words;
         if (!copyValidWords.includes(guess)) {
             createToast('Not a valid word!');
@@ -131,7 +127,6 @@ function Game() {
         // Check for victory
         if (guess === goal) {
             // Victory!
-            console.log("Congrats, you won in " + history.length + " tries");
             gameWin();
         }
     }
@@ -169,8 +164,12 @@ function Game() {
         setCurrentGuess(word);
     }
 
+    function isAlpha(char : string) {
+        // Imagine using real-life regular expressions
+        return /^[A-Z]$/i.test(char);
+    }
+
     function handleKeyDown(e: KeyboardEvent) {
-        console.log("Key pressed: " + e.key);
         var guess = currentGuess;
         if (e.key === "Backspace") {
             if (guess.length === 0)
@@ -182,6 +181,8 @@ function Game() {
             inputCheck(guess);
         } else {
             if (guess.length === 5)
+                return;
+            if(!isAlpha(e.key))
                 return;
             guess = guess + e.key.toLowerCase();
             updateRef(guess);
