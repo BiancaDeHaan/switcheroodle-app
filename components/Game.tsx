@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import {SmallPopup} from './SmallPopup';
 import 'react-toastify/dist/ReactToastify.css';
 import submitButton from './../public/submit.png';
+import {TopNav} from './TopNav';
 import Image from 'next/image'
 
 
@@ -182,6 +183,8 @@ function Game() {
         } else if (e.key === "Enter") {
             updateRef("");
             inputCheck(guess);
+        } else if(gameOver===true) {
+            return;
         } else {
             if (guess.length === 5)
                 return;
@@ -203,6 +206,7 @@ function Game() {
 
     return (
         <div className="game">
+            <TopNav gameOver={gameOver}/>
             <hr />
             <ToastContainer />
             {gameOver && isOpen && <SmallPopup
@@ -215,7 +219,7 @@ function Game() {
             <CurrentWord current={currentWord} />
             <hr className="bar" />
             <Word word={currentGuess} />
-            <Image className="submit-button" src={submitButton} alt='submit-button' onClick={handleSubmitButton} />
+            <Image className="submit-button" src={submitButton} alt='submit-button' onClick={handleSubmitButton} width={50} height={50}/>
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />

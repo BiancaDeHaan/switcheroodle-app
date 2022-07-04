@@ -2,7 +2,11 @@ import {Title} from './Title';
 import {InfoButton} from './InfoButton';
 import {StatButton} from './StatButton';
 
-function TopNav() {
+interface ShareProps {
+  gameOver: boolean;
+}
+
+function TopNav(props: ShareProps) {
     return (
         <div className="top-nav">
             <div >
@@ -10,7 +14,7 @@ function TopNav() {
             </div>
             <Title />
             <div >
-              <StatButton />
+              <StatButton gameOver={props.gameOver}/>
             </div>
         </div>
       )

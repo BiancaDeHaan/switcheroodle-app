@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { ShareButton } from './ShareButton';
 
-interface ChartProps{
-    data: number[];
- }
+interface ShareProps {
+    gameOver: boolean;
+}
 
-function StatDisplay() {
+function StatDisplay(props: ShareProps) {
     const[totalGames, setTotalGames] = useState(() => {
         const saved = localStorage.getItem('number-wins');
         if(saved == null)
@@ -30,6 +31,11 @@ function StatDisplay() {
             <p>Average 
             Moves <br/>
             {totalWins}</p>
+    </div>
+    <div>
+        {
+        <ShareButton gameOver={props.gameOver}/>
+}
     </div>
         </div>
     )

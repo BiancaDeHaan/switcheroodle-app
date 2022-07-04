@@ -1,28 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {SmallPopup} from './SmallPopup';
-import {StatDisplay} from './StatDisplay';
+import { SmallPopup } from './SmallPopup';
+import { StatDisplay } from './StatDisplay';
 import Image from 'next/image'
 
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
+interface ShareProps {
+    gameOver: boolean;
+}
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-);
-
-function StatButton() {
+function StatButton(props: ShareProps) {
     const [isOpen, setIsOpen] = useState(false);
     function showInfoPopup() {
         setIsOpen(true);
@@ -38,7 +23,8 @@ function StatButton() {
             {isOpen && <SmallPopup
                 content={<>
                     <h2 className="popup-title"><b>Statistics</b></h2><div className="popup-text">
-                        <StatDisplay />
+                    <hr className="bar" />
+                    <StatDisplay gameOver={props.gameOver}/>
                     </div>
                 </>}
                 handleClose={togglePopup}
@@ -49,4 +35,4 @@ function StatButton() {
 
 }
 
-export {StatButton}
+export { StatButton }
