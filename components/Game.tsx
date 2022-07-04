@@ -6,9 +6,7 @@ import { Word } from './game/Word';
 import { toast, ToastContainer } from "react-toastify";
 import {SmallPopup} from './SmallPopup';
 import 'react-toastify/dist/ReactToastify.css';
-import submitButton from './../public/submit.png';
 import {TopNav} from './TopNav';
-import Image from 'next/image'
 
 
 type WordsData = {
@@ -157,7 +155,7 @@ function Game() {
     function createToast(text: string) {
         toast(text, {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 2000,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
@@ -209,7 +207,7 @@ function Game() {
         <div className="game">
             <TopNav gameOver={gameOver} average={averageScore} moves={history.length}/>
             <hr />
-            <ToastContainer />
+            <ToastContainer className="toast" />
             {gameOver && isOpen && <SmallPopup
                 content={<>
                     <b className="popup-title">Nice win!</b>

@@ -120,3 +120,13 @@
     margin-bottom: 1em;
     padding-bottom: 0em;
 }
+
+.toast {
+    --toastify-color-progress-light: linear-gradient(
+    to right,
+    #007aff,
+    #5ac8fa,
+    #4cd964
+  
+  );
+}
