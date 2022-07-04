@@ -11,7 +11,9 @@
 
   .submit-button {
     cursor: pointer;
-    margin-top: .5em;
+    margin-top: 1em;
+    height: 50px;
+    width: 50px;
   }
 
   .bar {

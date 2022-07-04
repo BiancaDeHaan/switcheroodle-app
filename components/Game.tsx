@@ -219,7 +219,7 @@ function Game() {
             <CurrentWord current={currentWord} />
             <hr className="bar" />
             <Word word={currentGuess} />
-            <Image className="submit-button" src={submitButton} alt='submit-button' onClick={handleSubmitButton} width={50} height={50}/>
+            <img className="submit-button" src='/submit.png' alt='submit-button' onClick={handleSubmitButton} width={50} height={50}/>
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />

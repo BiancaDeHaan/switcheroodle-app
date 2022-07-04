@@ -21,7 +21,7 @@
     background: #282c34;
     border-radius: 4px;
     padding: 20px;
-    padding-top:10px;
+    padding-top: 10px;
     border: 1px solid #999;
     overflow: auto;
 }
@@ -64,37 +64,53 @@
     font-size: 1.1em;
     line-height: 1.6;
     text-align: center;
+    text-decoration: underline;
 }
 
 /* Animate the pop-up*/
 /* Add Animation */
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-  }
+    from {
+        top: -300px;
+        opacity: 0
+    }
 
-  .share-button {
-    background-color: DodgerBlue; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    width: 30%;
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.share-button {
+    background-color: #282c34;
+    border: solid;
+    border-color: white;
+    color: white;
+    font-size: 18px;
     border-radius: 10px;
-  margin-left: 2em;
-  padding: 1em;
-  }
-  
-  .share-button:hover {
-    background-color: RoyalBlue;
-  }
+    padding: 8px 16px;
+    width: 30%;
+}
 
-  .share-text {
+.share-button:hover {
+    cursor: pointer;
+    background-color: darkslategray;
+
+}
+
+.share-img {
     display: inline-block;
-  }
+    vertical-align: middle;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
 
-  .stat {
+.share-text {
+    vertical-align: middle;
+}
+
+.stat {
     display: inline-block;
     margin-left: 2em;
     margin-right: 2em;
@@ -102,4 +118,4 @@
     padding-right: .5em;
     margin-bottom: 1em;
     padding-bottom: 0em;
-  }
+}
