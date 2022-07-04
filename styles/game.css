@@ -1,0 +1,32 @@
+.game {
+    text-align: center;
+}
+
+.header {
+    color: white;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    font-size: 2.0em;
+  }
+
+  .submit-button {
+    color: darkcyan;
+    border-radius: 10px;
+    margin-left: 2em;
+    padding: 1em;
+  }
+  
+  .submit-button:hover {
+    background-color: lavender;
+  }
+  
+  .submit-button:active {
+    background-color: plum;
+  }
+
+  .bar {
+      width: 70%;
+      margin-top: 1em;
+      margin-bottom: 1em;
+  }
+  

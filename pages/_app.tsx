@@ -1,4 +1,9 @@
 import '../styles/globals.css'
+import '../styles/top-nav.css';
+import '../styles/game.css';
+import '../styles/word.css';
+import '../styles/popup.css';
+
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
