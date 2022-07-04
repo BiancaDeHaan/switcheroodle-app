@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import data from '../../data/words.json';
+import data from '../../data/pick_words.json';
 import { stringify } from 'querystring';
 
 type WordsData = {
@@ -20,8 +20,8 @@ export default function handler(
     var month = date.getMonth();
     var year = date.getFullYear();
     var firstIndex = day + (31*month) + (365*year);
-    var secondIndex = 2*firstIndex % 12900;
-    firstIndex = firstIndex % 12900;
+    var secondIndex = 2*firstIndex % 2300;
+    firstIndex = firstIndex % 2300;
     var firstWord : string = data[firstIndex];
     var secondWord : string = data[secondIndex];
     res.status(200).json({ beg: firstWord, final: secondWord
