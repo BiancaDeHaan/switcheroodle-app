@@ -12,7 +12,7 @@ function ShareButton(props: ShareProps) {
 
     function copyShareText() {
         setClicked(true);
-        copy('I did todays Switcheroodle in ' + props.moves + ' moves. My average is ' + props.moves + ' moves. Try and beat me at https://www.switcheroodle.com/')
+        copy('I did todays Switcheroodle in ' + props.moves + ' moves. My average is ' + props.average + ' moves. Try and beat me at https://www.switcheroodle.com/')
     }
 
     return (
