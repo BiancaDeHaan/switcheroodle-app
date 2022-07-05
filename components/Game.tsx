@@ -53,6 +53,7 @@ function Game() {
 
     useEffect(() => {
         window.addEventListener('resize', handleWindowSizeChange);
+        handleWindowSizeChange();
 
         var now = new Date();
         var resetTime = localStorage.getItem('time-reset');
