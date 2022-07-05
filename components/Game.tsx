@@ -8,6 +8,7 @@ import { SmallPopup } from './SmallPopup';
 import 'react-toastify/dist/ReactToastify.css';
 import { TopNav } from './TopNav';
 import { KeyBoard } from './Keyboard';
+import Image from 'next/image'
 
 
 type WordsData = {
@@ -239,7 +240,8 @@ function Game() {
             <CurrentWord current={currentWord} />
             <hr className="bar" />
             <Word word={currentGuess} />
-            <img className="submit-button" src='/submit.png' alt='submit-button' onClick={handleSubmitButton} width={50} height={50} />
+            <div className="word-padding" />
+            <Image width={50} height={50} className="submit-button" src='/submit.png' alt='submit-button' onClick={handleSubmitButton} />
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
