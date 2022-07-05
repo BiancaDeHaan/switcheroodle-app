@@ -23,7 +23,7 @@ function Game() {
     const [gameOver, setGameOver] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [averageScore, setAverageScore] = useState<number>(0);
-    const [width, setWidth] = useState<number>(0);
+    const [width, setWidth] = useState<number>(1000);
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -243,8 +243,7 @@ function Game() {
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
             {width <= 768 &&
-            <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} />
-}
+            <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} /> }
         </div>
     )
 }

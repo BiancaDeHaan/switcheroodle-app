@@ -11,6 +11,10 @@
     margin-bottom: 0.5em;
   }
 
+  .history {
+    margin-top: 0.5em;
+  }
+
   .submit-button {
     cursor: pointer;
     margin-top: 1.5em;
