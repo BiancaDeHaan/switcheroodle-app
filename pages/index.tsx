@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Switcheroodle</title>
-        <meta name="description" content="A twist on the class Wordle" />
+        <meta name="description" content="A twist on the classic Wordle" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Game/>
