@@ -7,7 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { SmallPopup } from './SmallPopup';
 import 'react-toastify/dist/ReactToastify.css';
 import { TopNav } from './TopNav';
-
+import { KeyBoard } from './Keyboard';
 
 
 type WordsData = {
@@ -23,7 +23,7 @@ function Game() {
     const [gameOver, setGameOver] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [averageScore, setAverageScore] = useState<number>(0);
-    
+
     const ref = useRef(null);
 
     function showGameWonPopup() {
@@ -83,7 +83,6 @@ function Game() {
             // They've never visited the website
             now.setUTCHours(28, 0, 0, 0);
             localStorage.setItem('time-reset', JSON.stringify(now));
-
             handleFetchPosts("", "");
         }
     }, []);
@@ -91,7 +90,6 @@ function Game() {
     function handleSubmitButton(e: React.SyntheticEvent) {
         e.preventDefault();
         inputCheck(currentGuess);
-        updateRef("");
     }
 
     function inputCheck(guess: string) {
@@ -174,25 +172,37 @@ function Game() {
         return /^[A-Z]$/i.test(char);
     }
 
-    function handleKeyDown(e: KeyboardEvent) {
+    function deleteKey() {
         var guess = currentGuess;
+        if (guess.length === 0)
+            return;
+        guess = guess.substring(0, guess.length - 1);
+        updateRef(guess);
+    }
+
+    function enterKey() {
+        var guess = currentGuess;
+        updateRef("");
+        inputCheck(guess);
+    }
+
+    function charKey(key : string) {
+        var guess = currentGuess;
+        if (guess.length === 5)
+            return;
+        guess = guess + key.toLowerCase();
+        updateRef(guess);
+    }
+
+    function handleKeyDown(e: KeyboardEvent) {
         if (e.key === "Backspace") {
-            if (guess.length === 0)
-                return;
-            guess = guess.substring(0, guess.length - 1);
-            updateRef(guess);
+            deleteKey();
         } else if (e.key === "Enter") {
-            updateRef("");
-            inputCheck(guess);
+            enterKey();
         } else if (gameOver === true) {
             return;
-        } else {
-            if (guess.length === 5)
-                return;
-            if (!isAlpha(e.key))
-                return;
-            guess = guess + e.key.toLowerCase();
-            updateRef(guess);
+        } else if (isAlpha(e.key)){
+            charKey(e.key);
         }
     }
 
@@ -224,13 +234,7 @@ function Game() {
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
-            <form className="text-area">
-                <label>
-                    <input autoFocus ref={ref} type="text" name="name" />
-                </label>
-            </form>
-
-
+            <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} />
         </div>
     )
 }

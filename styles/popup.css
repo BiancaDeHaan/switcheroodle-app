@@ -122,11 +122,27 @@
 }
 
 .toast {
-    --toastify-color-progress-light: linear-gradient(
-    to right,
-    #007aff,
-    #5ac8fa,
-    #4cd964
-  
-  );
+    --toastify-color-progress-light: linear-gradient(to right,
+            #007aff,
+            #5ac8fa,
+            #4cd964);
+
+
+}
+
+@media screen and (max-width: 1000px) { 
+    .small-box {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        max-height: 70vh;
+        margin-top: calc(15vh - 20px);
+        background: #282c34;
+        border-radius: 4px;
+        padding: 20px;
+        padding-top: 10px;
+        border: 1px solid #999;
+        overflow: auto;
+    }
 }

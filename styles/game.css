@@ -8,7 +8,7 @@
     color: white;
     font-size: 2.0em;
     margin-top: 0em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
   }
 
   .submit-button {
@@ -32,3 +32,12 @@
   .text-area {
     display: none;
   }
+
+  @media screen and (max-width: 1000px) {
+    .bar {
+      width: 90%;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+}
