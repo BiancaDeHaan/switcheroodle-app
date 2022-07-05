@@ -33,7 +33,7 @@
     display: none;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     .bar {
       width: 90%;
       margin-top: 1.5em;

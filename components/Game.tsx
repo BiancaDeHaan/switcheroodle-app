@@ -23,8 +23,11 @@ function Game() {
     const [gameOver, setGameOver] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [averageScore, setAverageScore] = useState<number>(0);
+    const [width, setWidth] = useState<number>(0);
 
-    const ref = useRef(null);
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
 
     function showGameWonPopup() {
         setIsOpen(true);
@@ -49,6 +52,8 @@ function Game() {
     };
 
     useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+
         var now = new Date();
         var resetTime = localStorage.getItem('time-reset');
         // They've visited the website before
@@ -62,7 +67,6 @@ function Game() {
                 now.setUTCHours(28, 0, 0, 0);
                 localStorage.setItem('time-reset', JSON.stringify(now));
                 handleFetchPosts("", "");
-                return;
             } else {
                 // Don't reset yet
                 const history = localStorage.getItem('history');
@@ -84,6 +88,10 @@ function Game() {
             now.setUTCHours(28, 0, 0, 0);
             localStorage.setItem('time-reset', JSON.stringify(now));
             handleFetchPosts("", "");
+        }
+
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
         }
     }, []);
 
@@ -186,7 +194,7 @@ function Game() {
         inputCheck(guess);
     }
 
-    function charKey(key : string) {
+    function charKey(key: string) {
         var guess = currentGuess;
         if (guess.length === 5)
             return;
@@ -201,7 +209,7 @@ function Game() {
             enterKey();
         } else if (gameOver === true) {
             return;
-        } else if (isAlpha(e.key)){
+        } else if (isAlpha(e.key)) {
             charKey(e.key);
         }
     }
@@ -234,7 +242,9 @@ function Game() {
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
+            {width <= 768 &&
             <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} />
+}
         </div>
     )
 }

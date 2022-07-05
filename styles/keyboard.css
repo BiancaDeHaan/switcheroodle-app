@@ -1,0 +1,35 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #282c34;
+  }
+
+  .second-row {
+    margin: 0.5rem 0;
+  }
+  
+  .keyboard-button {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: lightgray;
+    border-radius: 2px;
+  }
+
+  .keyboard-button:hover {
+      background-color: darkgray;
+  }
+
+  .keyboard-pos {
+    position:fixed; 
+    width:100%; 
+    padding:5px; 
+    bottom: 0%;
+  }
+
+  
