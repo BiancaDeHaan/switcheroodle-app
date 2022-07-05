@@ -4,9 +4,10 @@ import { CurrentWord } from './game/CurrentWord';
 import { PreviousGuesses } from './game/PreviousGuesses';
 import { Word } from './game/Word';
 import { toast, ToastContainer } from "react-toastify";
-import {SmallPopup} from './SmallPopup';
+import { SmallPopup } from './SmallPopup';
 import 'react-toastify/dist/ReactToastify.css';
-import {TopNav} from './TopNav';
+import { TopNav } from './TopNav';
+
 
 
 type WordsData = {
@@ -22,7 +23,6 @@ function Game() {
     const [gameOver, setGameOver] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [averageScore, setAverageScore] = useState<number>(0);
-
 
     function showGameWonPopup() {
         setIsOpen(true);
@@ -140,8 +140,8 @@ function Game() {
         var wins = (savedWins === null) ? 1 : JSON.parse(savedWins) + 1;
 
         const savedAverage = localStorage.getItem('average');
-        var average = (savedAverage === null) ? history.length : (JSON.parse(savedAverage) * (wins-1)) + history.length;
-        average = average/wins;
+        var average = (savedAverage === null) ? history.length : (JSON.parse(savedAverage) * (wins - 1)) + history.length;
+        average = average / wins;
         setAverageScore(average);
 
         // Store values
@@ -167,7 +167,7 @@ function Game() {
         setCurrentGuess(word);
     }
 
-    function isAlpha(char : string) {
+    function isAlpha(char: string) {
         // Imagine using real-life regular expressions
         return /^[A-Z]$/i.test(char);
     }
@@ -182,12 +182,12 @@ function Game() {
         } else if (e.key === "Enter") {
             updateRef("");
             inputCheck(guess);
-        } else if(gameOver===true) {
+        } else if (gameOver === true) {
             return;
         } else {
             if (guess.length === 5)
                 return;
-            if(!isAlpha(e.key))
+            if (!isAlpha(e.key))
                 return;
             guess = guess + e.key.toLowerCase();
             updateRef(guess);
@@ -205,23 +205,25 @@ function Game() {
 
     return (
         <div className="game">
-            <TopNav gameOver={gameOver} average={averageScore} moves={history.length}/>
-            <hr />
+            <TopNav gameOver={gameOver} average={averageScore} moves={history.length} />
+            <hr className="wide-bar" />
             <ToastContainer className="toast" />
             {gameOver && isOpen && <SmallPopup
                 content={<>
                     <b className="popup-title">Nice win!</b>
                     <p className="popup-text">You got the word in {history.length} moves!</p>
                     <p className="popup-text">Your average is {averageScore} moves!</p>
-            </>}
-            handleClose={togglePopup} /> }
+                </>}
+                handleClose={togglePopup} />}
             <CurrentWord current={currentWord} />
             <hr className="bar" />
             <Word word={currentGuess} />
-            <img className="submit-button" src='/submit.png' alt='submit-button' onClick={handleSubmitButton} width={50} height={50}/>
+            <img className="submit-button" src='/submit.png' alt='submit-button' onClick={handleSubmitButton} width={50} height={50} />
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
+           
+            
         </div>
     )
 }

@@ -9,6 +9,7 @@ function CurrentWord(props: CurrentProps) {
     return (
         <div>
             <h3 className="header">Current Word:</h3>
+            <textarea className="text-area"> </textarea>
             <Word word={props.current}/>
         </div>
     )
