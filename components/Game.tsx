@@ -23,6 +23,8 @@ function Game() {
     const [gameOver, setGameOver] = useState<boolean>(false);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [averageScore, setAverageScore] = useState<number>(0);
+    
+    const ref = useRef(null);
 
     function showGameWonPopup() {
         setIsOpen(true);
@@ -222,8 +224,13 @@ function Game() {
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
-           
-            
+            <form className="text-area">
+                <label>
+                    <input autoFocus ref={ref} type="text" name="name" />
+                </label>
+            </form>
+
+
         </div>
     )
 }
