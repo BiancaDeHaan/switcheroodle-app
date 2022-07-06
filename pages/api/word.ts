@@ -16,6 +16,9 @@ export default function handler(
     res: NextApiResponse<Data>
   ) {
     var date: Date = new Date();
+    date.toLocaleString('en-US', {
+      timeZone: 'America/New_York',
+    });
     var day = date.getDay();
     var month = date.getMonth();
     var year = date.getFullYear();
