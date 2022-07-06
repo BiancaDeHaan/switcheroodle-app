@@ -11,10 +11,10 @@
 }
 
 .keyboard-button {
-    font-size: 1.0rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    padding: 0.5rem;
-    margin: 0 2px;
+    padding: 0.4rem;
+    margin: 0 1.6px;
     cursor: pointer;
     text-transform: uppercase;
     background-color: lightgray;
