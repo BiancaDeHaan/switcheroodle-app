@@ -4,13 +4,13 @@
     align-items: center;
     padding: 0.5rem;
     background-color: #282c34;
-  }
+}
 
-  .second-row {
+.second-row {
     margin: 0.5rem 0;
-  }
-  
-  .keyboard-button {
+}
+
+.keyboard-button {
     font-size: 1.0rem;
     font-weight: 700;
     padding: 0.5rem;
@@ -19,17 +19,20 @@
     text-transform: uppercase;
     background-color: lightgray;
     border-radius: 2px;
-  }
+}
 
-  .keyboard-button:hover {
-      background-color: darkgray;
-  }
+@media (hover: hover) {
+    .keyboard-button:hover {
+        background-color: darkgray;
+    }
+}
 
-  .keyboard-pos {
-    position:fixed; 
-    width:100%; 
-    padding:5px; 
+
+.keyboard-pos {
+    position: fixed;
+    width: 100%;
+    padding: 5px;
     bottom: 0%;
-  }
+}
 
-  
+@media screen and (max-width: 768px) {}
