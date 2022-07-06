@@ -60,4 +60,12 @@
       margin-bottom: 0.25em;
     }
 
+    .game {
+      text-align: center;
+      margin: 0px;
+      padding: 0px;
+      height: 75vh;
+      overflow-y: scroll;
+  }
+
 }

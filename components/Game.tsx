@@ -150,7 +150,7 @@ function Game() {
         var wins = (savedWins === null) ? 1 : JSON.parse(savedWins) + 1;
 
         const savedAverage = localStorage.getItem('average');
-        var average = (savedAverage === null) ? history.length : (JSON.parse(savedAverage) * (wins - 1)) + history.length;
+        var average = (savedAverage === null) ? history.length+1 : (JSON.parse(savedAverage) * (wins - 1)) + history.length +1;
         average = average / wins;
         setAverageScore(average);
 
