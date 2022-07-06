@@ -35,4 +35,12 @@
     bottom: 0%;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .second-row {
+        margin: 0.25rem 0;
+    }
+    .keyboard-button:hover {
+        background-color: lightgray;
+    }
+
+}
