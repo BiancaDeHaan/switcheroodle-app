@@ -6,7 +6,7 @@ import { Game } from '../components/Game';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`} >
       <Head>
         <title>Switcheroodle</title>
         <meta name="description" content="A twist on the classic Wordle" />

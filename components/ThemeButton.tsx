@@ -19,7 +19,7 @@ function ThemeButton() {
                 changeTheme('light-theme')
             }
         } else {
-            setTheme('dark-theme')
+            changeTheme('dark-theme')
         }
     }
 
