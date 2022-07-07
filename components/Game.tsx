@@ -11,6 +11,7 @@ import { KeyBoard } from './Keyboard';
 import Image from 'next/image'
 import submitbutton from '../public/submit.png'
 import {ShareButton} from './buttons/ShareButton';
+import { DeleteButton } from './buttons/DeleteButton';
 
 type WordsData = {
     words: string[];
@@ -246,9 +247,14 @@ function Game() {
                     <ShareButton gameOver={gameOver} average={averageScore} moves={history.length}/>
                 </>}
                 handleClose={togglePopup} />}
+            <div>
             <CurrentWord current={currentWord} />
+            </div>
             <hr className="bar" />
+            <div className="user-input-row">
             <Word word={currentGuess} />
+            <DeleteButton onClick={clearCurrent}/>
+            </div>
             <div className="word-padding" />
             <span className="submit-button">
             <Image width={50} height={50} src={submitbutton} alt='submit-button' onClick={handleSubmitButton} />
