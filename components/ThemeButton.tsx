@@ -34,7 +34,7 @@ function ThemeButton() {
     }, []);
 
     return (
-        <span className="left-button">
+        <span className="left-button icon-size">
             <Image className="icon" height={30} width={30} src='/dark-mode.png' alt="dark-mode-switch-img" onClick={toggleTheme} />
         </span>
     )
