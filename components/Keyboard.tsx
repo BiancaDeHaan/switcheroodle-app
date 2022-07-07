@@ -40,7 +40,7 @@ function KeyBoard(props: KeyboardProps) {
                 ))}
             </div>
             <div className="keyboard-row">
-            <Key isAlpha={false} value="DELETE" onClick={onClick}/>
+            <Key isAlpha={false} value="DEL" onClick={onClick}/>
                 {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
                     <Key
                         value={key}

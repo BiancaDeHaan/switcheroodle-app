@@ -17,7 +17,7 @@
     text-transform: uppercase;
     background-color: var(--keyboard-unpressed);
     border-radius: 2px;
-    height: 3.0rem;
+    height: 50px;
     color: var(--keyboard-text-color)
 }
 
@@ -41,11 +41,11 @@
 }
 
 .isalpha {
-    min-width: 2.0rem;
+    min-width: 30px;
 }
 
 .isnotalpha {
-    min-width: 4rem;
+    min-width: 64px;
 }
 
 @media screen and (max-width: 768px) {
