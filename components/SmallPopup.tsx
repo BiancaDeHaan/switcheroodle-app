@@ -11,7 +11,6 @@ function SmallPopup(props:PopupInfo) {
 
   function outsideClick(event : MouseEvent) {
     if (ref.current && !ref.current.contains(event.target)) {
-        console.log('testing');
       props.handleClose();
   }
   }
