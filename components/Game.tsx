@@ -10,6 +10,7 @@ import { TopNav } from './TopNav';
 import { KeyBoard } from './Keyboard';
 import Image from 'next/image'
 import submitbutton from '../public/submit.png'
+import {ShareButton} from './ShareButton';
 
 type WordsData = {
     words: string[];
@@ -238,6 +239,7 @@ function Game() {
                     <b className="popup-title">Nice win!</b>
                     <p className="popup-text">You got the word in {history.length} moves!</p>
                     <p className="popup-text">Your average is {averageScore} moves!</p>
+                    <ShareButton gameOver={gameOver} average={averageScore} moves={history.length}/>
                 </>}
                 handleClose={togglePopup} />}
             <CurrentWord current={currentWord} />
