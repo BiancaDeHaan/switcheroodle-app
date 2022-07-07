@@ -68,7 +68,7 @@ function Game() {
                 localStorage.setItem('current-word', "");
                 localStorage.setItem('goal-word', "");
                 localStorage.setItem('game-over', JSON.stringify(false));
-                now.setUTCHours(28, 0, 0, 0);
+                now.setUTCHours(24, 0, 0, 0);
                 localStorage.setItem('time-reset', JSON.stringify(now));
                 handleFetchPosts("", "");
             } else {
@@ -89,7 +89,7 @@ function Game() {
             }
         } else {
             // They've never visited the website
-            now.setUTCHours(28, 0, 0, 0);
+            now.setUTCHours(24, 0, 0, 0);
             localStorage.setItem('time-reset', JSON.stringify(now));
             handleFetchPosts("", "");
         }

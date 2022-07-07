@@ -12,7 +12,6 @@ export default function handler(
     req: NextApiRequest,
     res: NextApiResponse<WordsData>
   ) {
-      console.log(new Date());
     res.status(200).json({ words : data })
   }
   
