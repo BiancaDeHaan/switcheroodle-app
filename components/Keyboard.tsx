@@ -19,7 +19,7 @@ function KeyBoard(props: KeyboardProps) {
 
     return (
         <div className="keyboard keyboard-pos">
-            <div>
+            <div className="keyboard-row">
                 {['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((key) => (
                     <Key
                         value={key}
@@ -29,7 +29,7 @@ function KeyBoard(props: KeyboardProps) {
                     />
                 ))}
             </div>
-            <div className="second-row">
+            <div className="second-row keyboard-row">
                 {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map((key) => (
                     <Key
                         value={key}
@@ -39,7 +39,7 @@ function KeyBoard(props: KeyboardProps) {
                     />
                 ))}
             </div>
-            <div>
+            <div className="keyboard-row">
             <Key isAlpha={false} value="DELETE" onClick={onClick}/>
                 {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
                     <Key

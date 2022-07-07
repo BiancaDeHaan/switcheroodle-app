@@ -245,6 +245,7 @@ function Game() {
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
+            <div className="dead-space" />
             {width <= 768 &&
             <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} /> }
         </div>

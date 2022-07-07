@@ -64,8 +64,16 @@
       text-align: center;
       margin: 0px;
       padding: 0px;
-      height: 70vh;
+      height: 73vh;
       overflow-y: scroll;
+  }
+
+  .dead-space {
+    padding-top: 12.5%;
+    padding-bottom: 12.5%;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
   }
 
 }
