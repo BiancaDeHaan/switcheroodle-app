@@ -17,6 +17,12 @@
     height: 3rem;
 }
 
+.top-nav-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon {
     height: 40px;
     width: 40px;

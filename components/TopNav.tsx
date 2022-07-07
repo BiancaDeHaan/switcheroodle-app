@@ -13,15 +13,14 @@ interface ShareProps {
 function TopNav(props: ShareProps) {
   return (
     <div className="top-nav">
-      <div >
+      <div className="top-nav-group">
         <InfoButton />
         <SupportButton />
       </div>
       <Title />
-      <div>
+      <div className="top-nav-group">
         <ThemeButton />
         <StatButton gameOver={props.gameOver} moves={props.moves} average={props.average} />
-
       </div>
     </div>
   )
