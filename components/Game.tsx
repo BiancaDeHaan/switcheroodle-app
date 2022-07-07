@@ -183,6 +183,7 @@ function Game() {
     }
 
     function deleteKey() {
+        if(gameOver) return;
         var guess = currentGuess;
         if (guess.length === 0)
             return;
@@ -191,12 +192,14 @@ function Game() {
     }
 
     function enterKey() {
+        if(gameOver) return;
         var guess = currentGuess;
         updateRef("");
         inputCheck(guess);
     }
 
     function charKey(key: string) {
+        if(gameOver) return;
         var guess = currentGuess;
         if (guess.length === 5)
             return;
