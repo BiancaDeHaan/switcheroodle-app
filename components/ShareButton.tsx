@@ -17,7 +17,7 @@ function ShareButton(props: ShareProps) {
 
     return (
         <div>
-            <button className="share-button" onClick={copyShareText}>
+            <button className="share-button icon-size" onClick={copyShareText}>
                 <span className="share-text">Share</span>
                 <img className="share-img" height={40} width={40} src='/sharing.png' alt="share-img" />
             </button>

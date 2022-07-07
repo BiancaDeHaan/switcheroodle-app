@@ -21,7 +21,7 @@ function StatButton(props: ShareProps) {
 
     return (
         <span>
-            <span className="right-button">
+            <span className="right-button icon-size">
             <Image className="icon" height={30} width={30} src='/stats.png' alt="stat-img" onClick={showInfoPopup} />
             </span>
             {isOpen && <SmallPopup
