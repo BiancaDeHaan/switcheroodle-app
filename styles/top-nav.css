@@ -61,7 +61,7 @@
       color: var(--keyboard-pressed);
     margin-top: 0.2em;
     margin-bottom: 0.2em;
-    font-size: 2.0em;
+    font-size: 1.6em;
     background: -webkit-linear-gradient(#02e8b4, #0899db);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

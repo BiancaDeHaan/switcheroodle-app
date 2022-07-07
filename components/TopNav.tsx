@@ -15,12 +15,12 @@ function TopNav(props: ShareProps) {
     <div className="top-nav">
       <div className="top-nav-group">
         <InfoButton />
-        <SupportButton />
+        <StatButton gameOver={props.gameOver} moves={props.moves} average={props.average} />
       </div>
       <Title />
       <div className="top-nav-group">
         <ThemeButton />
-        <StatButton gameOver={props.gameOver} moves={props.moves} average={props.average} />
+        <SupportButton />
       </div>
     </div>
   )
