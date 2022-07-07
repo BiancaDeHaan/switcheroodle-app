@@ -247,7 +247,7 @@ function Game() {
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
-            {width <= 768 &&
+            {width <= 768 && gameOver===false &&
             <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} /> }
         </div>
     )

@@ -65,8 +65,6 @@
       margin: 0px;
       padding: 0px;
       height: 65vh;
-      overflow-y: scroll;
+      overflow-y: auto;
   }
-
-
 }
