@@ -14,7 +14,7 @@ function PreviousGuesses(props: Guesses) {
             {props.guesses.length > 0 && <div>
             <h3 className="header history">History</h3>
             <div>{listItems}</div>
-            </div> }
+            </div>}
             
         </div>
     )

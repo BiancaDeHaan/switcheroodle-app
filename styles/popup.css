@@ -1,7 +1,7 @@
 /* Small pop up box style */
 .small-popup-box {
     position: fixed;
-    background: #00000050;
+    background: var(shade-background);
     width: 100%;
     height: 100vh;
     top: 0;
@@ -18,17 +18,17 @@
     height: auto;
     max-height: 70vh;
     margin-top: calc(15vh - 20px);
-    background: #282c34;
+    background: var(--background);
     border-radius: 4px;
     padding: 20px;
     padding-top: 10px;
-    border: 1px solid #999;
+    border: 1px solid var(--box-outline); 
     overflow: auto;
 }
 
 /* The Close Button */
 .small-close-icon {
-    color: #aaa;
+    color: var(--close-icon);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -48,19 +48,19 @@
 /* Pop-up text */
 .popup-title {
     font-size: 2.0em;
-    color: lavender;
+    color: var(--pop-up-title);
     text-align: center;
 }
 
 .popup-text {
-    color: white;
+    color: var(--header-text);
     font-size: 1.2em;
     line-height: 1.6;
     text-align: center;
 }
 
 .popup-links-text {
-    color: white;
+    color: var(--header-text);
     font-size: 1.1em;
     line-height: 1.6;
     text-align: center;
@@ -82,10 +82,10 @@
 }
 
 .share-button {
-    background-color: #282c34;
+    background-color: var(--background);
     border: solid;
-    border-color: white;
-    color: white;
+    border-color: var(--header-text);
+    color: var(--header-text);
     font-size: 18px;
     border-radius: 10px;
     padding: 8px 16px;
@@ -95,8 +95,7 @@
 
 .share-button:hover {
     cursor: pointer;
-    background-color: darkslategray;
-
+    background-color: var(--dark-background);
 }
 
 .share-img {
@@ -138,11 +137,11 @@
         height: auto;
         max-height: 70vh;
         margin-top: calc(15vh - 20px);
-        background: #282c34;
+        background: var(--background);
         border-radius: 4px;
         padding: 20px;
         padding-top: 10px;
-        border: 1px solid #999;
+        border: 1px solid var(--box-outline);
         overflow: auto;
     }
 }

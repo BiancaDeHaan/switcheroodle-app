@@ -13,8 +13,9 @@ function InfoButton() {
     }
 
     return (
-        <span>
+        <span> <span className="left-button">
             <Image className="icon" height={30} width={30} src='/info.png' alt="stat-img" onClick={showInfoPopup} />
+            </span>
             {isOpen && <SmallPopup
                 content={<>
                     <h2 className="popup-title"><b>About</b></h2>
