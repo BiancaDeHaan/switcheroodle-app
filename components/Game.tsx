@@ -10,7 +10,7 @@ import { TopNav } from './TopNav';
 import { KeyBoard } from './Keyboard';
 import Image from 'next/image'
 import submitbutton from '../public/submit.png'
-import {ShareButton} from './ShareButton';
+import {ShareButton} from './buttons/ShareButton';
 
 type WordsData = {
     words: string[];
@@ -206,6 +206,10 @@ function Game() {
             return;
         guess = guess + key.toLowerCase();
         updateRef(guess);
+    }
+
+    function clearCurrent() {
+        updateRef("");
     }
 
     function handleKeyDown(e: KeyboardEvent) {

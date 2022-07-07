@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { SmallPopup } from './SmallPopup';
-import { StatDisplay } from './StatDisplay';
+import { SmallPopup } from '../SmallPopup';
+import { StatDisplay } from '../StatDisplay';
 import Image from 'next/image'
 
 interface ShareProps {

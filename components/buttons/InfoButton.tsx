@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {SmallPopup} from './SmallPopup';
+import {SmallPopup} from '../SmallPopup';
 import Image from 'next/image'
 
 function InfoButton() {

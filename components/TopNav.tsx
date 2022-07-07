@@ -1,8 +1,8 @@
 import { Title } from './Title';
-import { InfoButton } from './InfoButton';
-import { StatButton } from './StatButton';
-import { ThemeButton } from './ThemeButton';
-import { SupportButton } from './SupportButton';
+import { InfoButton } from './buttons/InfoButton';
+import { StatButton } from './buttons/StatButton';
+import { ThemeButton } from './buttons/ThemeButton';
+import { SupportButton } from './buttons/SupportButton';
 
 interface ShareProps {
   gameOver: boolean;

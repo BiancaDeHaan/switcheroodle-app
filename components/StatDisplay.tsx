@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShareButton } from './ShareButton';
+import { ShareButton } from './buttons/ShareButton';
 
 interface ShareProps {
     gameOver: boolean;
