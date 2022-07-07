@@ -3,7 +3,9 @@ import { SmallPopup } from './SmallPopup';
 import Image from 'next/image'
 
 function SupportButton() {
-    const [isOpen, setIsOpen] = useState(false);
+    const emailAddress='biancadehaan77@gmail.com'
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [copied, setCopied] = useState<boolean>(false);
     function showInfoPopup() {
         setIsOpen(true);
     }
@@ -12,6 +14,10 @@ function SupportButton() {
         setIsOpen(!isOpen);
     }
 
+    function copyMailAddress() {
+        navigator.clipboard.writeText(emailAddress);
+        setCopied(true);
+    }
     return (
         <span>
             <span className="right-button">
@@ -21,7 +27,9 @@ function SupportButton() {
                 content={<>
                     <h2 className="popup-title"><b>Support</b></h2><div className="popup-text">
                     <hr className="bar" />
-                    <p>If you have any suggestions, feel free to email at biancadehaan77@gmail.com</p>
+                    <p>If you have any suggestions, feel free to email at <a className="mail-link" onClick={copyMailAddress}>{emailAddress}</a></p>
+                    {copied===true && 
+                    <p>Email copied to clipboard!</p>}
                     </div>
                 </>}
                 handleClose={togglePopup}

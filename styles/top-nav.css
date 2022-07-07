@@ -37,6 +37,11 @@
     margin-right: 0.25em;
   }
 
+  .mail-link {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
   @media screen and (max-width: 768px) {
     .icon {
       margin-left: 5px;
