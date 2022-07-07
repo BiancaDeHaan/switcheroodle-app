@@ -1,7 +1,7 @@
 .keyboard {
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.4rem;
     background-color: var(--background);
     justify-content: center;
 }
@@ -18,7 +18,9 @@
     background-color: var(--keyboard-unpressed);
     border-radius: 2px;
     height: 50px;
-    color: var(--keyboard-text-color)
+    color: var(--keyboard-text-color);
+    margin-left: .1rem;
+    margin-right: .1rem;
 }
 
 .keyboard-row {
@@ -42,11 +44,11 @@
 }
 
 .isalpha {
-    min-width: 30px;
+    min-width: 25px;
 }
 
 .isnotalpha {
-    min-width: 64px;
+    min-width: 58px;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,4 +59,27 @@
         background-color: var(--keyboard-unpressed);
     }
 
+}
+
+@media screen and (max-width: 320px) {
+    .keyboard-button {
+        font-size: 0.7rem;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: var(--keyboard-unpressed);
+        border-radius: 2px;
+        height: 45px;
+        color: var(--keyboard-text-color);
+        margin-left: .1rem;
+        margin-right: .1rem;
+    }
+
+    .isalpha {
+        min-width: 20px;
+    }
+    
+    .isnotalpha {
+        min-width: 50px;
+    }
 }
