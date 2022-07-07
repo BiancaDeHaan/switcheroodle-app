@@ -10,7 +10,7 @@ function KeyBoard(props: KeyboardProps) {
     const onClick = (value: string) => {
         if (value === 'ENTER') {
           props.onEnter()
-        } else if (value === 'DELETE') {
+        } else if (value === 'DEL') {
           props.onDelete()
         } else {
           props.onChar(value)
