@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {SmallPopup} from '../SmallPopup';
 import Image from 'next/image'
 
 function InfoButton() {
     const [isOpen, setIsOpen] = useState(false);
+
     function showInfoPopup() {
         setIsOpen(true);
     }
@@ -16,6 +17,7 @@ function InfoButton() {
         <span> <span className="left-button icon-size">
             <Image className="icon" height={30} width={30} src='/info.png' alt="stat-img" onClick={showInfoPopup} />
             </span>
+            <div>
             {isOpen && <SmallPopup
                 content={<>
                     <h2 className="popup-title"><b>About</b></h2>
@@ -29,8 +31,10 @@ function InfoButton() {
                     </div>
                 </>}
                 handleClose={togglePopup}
+                
 
             />}
+            </div>
         </span>
     )
     

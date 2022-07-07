@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { SmallPopup } from '../SmallPopup';
 import Image from 'next/image'
 
