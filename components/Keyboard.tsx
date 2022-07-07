@@ -25,7 +25,7 @@ function KeyBoard(props: KeyboardProps) {
                         value={key}
                         key={key}
                         onClick={onClick}
-                        width={40}
+                        isAlpha={true}
                     />
                 ))}
             </div>
@@ -35,21 +35,21 @@ function KeyBoard(props: KeyboardProps) {
                         value={key}
                         key={key}
                         onClick={onClick}
-                        width={40}
+                        isAlpha={true}
                     />
                 ))}
             </div>
             <div>
-            <Key width={65.4} value="DELETE" onClick={onClick}/>
+            <Key isAlpha={false} value="DELETE" onClick={onClick}/>
                 {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
                     <Key
                         value={key}
                         key={key}
                         onClick={onClick}
-                        width={40}
+                        isAlpha={true}
                     />
                 ))}
-                <Key width={65.4} value="ENTER" onClick={onClick} />
+                <Key isAlpha={false} value="ENTER" onClick={onClick} />
                     
             </div>
         </div>

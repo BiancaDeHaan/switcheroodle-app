@@ -4,6 +4,7 @@
     align-items: center;
     padding: 0.5rem;
     background-color: var(--background);
+    justify-content: center;
 }
 
 .second-row {
@@ -19,6 +20,8 @@
     text-transform: uppercase;
     background-color: var(--keyboard-unpressed);
     border-radius: 2px;
+    height: 3.6rem;
+    color: var(--keyboard-text-color)
 }
 
 @media (hover: hover) {
@@ -33,6 +36,14 @@
     width: 100%;
     padding: 5px;
     bottom: 0%;
+}
+
+.isalpha {
+    min-width: 2.5rem;
+}
+
+.isnotalpha {
+    min-width: 4rem;
 }
 
 @media screen and (max-width: 768px) {

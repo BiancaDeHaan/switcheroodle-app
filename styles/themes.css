@@ -9,6 +9,7 @@
     --pop-up-title: lavender;
     --box-outline: gray;
     --close-icon: #aaa;
+    --keyboard-text-color: black;
   }
 
 .light-theme {
@@ -16,9 +17,10 @@
     --background: white;
     --dark-background: darkslategray;
     --shade-background: #00000050;
-    --keyboard-unpressed: purple;
+    --keyboard-unpressed: white;
     --keyboard-pressed: darkgray;
     --pop-up-title: purple;
     --box-outline: gray;
     --close-icon: #aaa;
+    --keyboard-text-color: #0c61f6;
   }

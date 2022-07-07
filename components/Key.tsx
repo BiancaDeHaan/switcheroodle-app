@@ -1,7 +1,7 @@
 interface KeyProps {
     value: string;
     onClick: (value: string) => void
-    width: number
+    isAlpha: boolean
 
 }
 
@@ -12,10 +12,38 @@ function Key(props: KeyProps) {
     }
 
     return (
-        <button className="keyboard-button" onClick={handleClick}>
-            {props.value}
-        </button>
+        <button className="keyboard-button isalpha" onClick={handleClick}>
+                {props.value}
+            </button>
     )
+
+    
 }
 
 export { Key }
+
+/*
+{props.isAlpha === true ?
+                <button className="keyboard-button isalpha" onClick={handleClick}>
+                    {props.value}
+                </button> :
+                <button className="keyboad-button isnotalpha" onClick={handleClick}>
+                    {props.value}
+                </button>
+            } 
+
+            if (props.isAlpha === true) {
+        return (
+            <button className="keyboard-button isalpha" onClick={handleClick}>
+                {props.value}
+            </button>
+        )
+    } else {
+        return (
+            <button className="keyboad-button isalpha" onClick={handleClick}>
+                {props.value}
+            </button>
+        )
+    }
+
+    */
