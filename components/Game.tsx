@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { TopNav } from './TopNav';
 import { KeyBoard } from './Keyboard';
 import Image from 'next/image'
-
+import submitbutton from '../public/submit.png'
 
 type WordsData = {
     words: string[];
@@ -241,11 +241,12 @@ function Game() {
             <hr className="bar" />
             <Word word={currentGuess} />
             <div className="word-padding" />
-            <Image width={50} height={50} className="submit-button" src='/submit.png' alt='submit-button' onClick={handleSubmitButton} />
+            <span className="submit-button">
+            <Image width={50} height={50} src={submitbutton} alt='submit-button' onClick={handleSubmitButton} />
+            </span>
             <hr className="bar" />
             <GoalWord goal={goal} />
             <PreviousGuesses guesses={history} />
-            <div className="dead-space" />
             {width <= 768 &&
             <KeyBoard onChar={charKey} onDelete={deleteKey} onEnter={enterKey} /> }
         </div>
