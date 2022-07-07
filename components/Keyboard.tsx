@@ -40,7 +40,7 @@ function KeyBoard(props: KeyboardProps) {
                 ))}
             </div>
             <div>
-                <Key width={65.4} value="ENTER" onClick={onClick} />
+            <Key width={65.4} value="DELETE" onClick={onClick}/>
                 {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
                     <Key
                         value={key}
@@ -49,7 +49,7 @@ function KeyBoard(props: KeyboardProps) {
                         width={40}
                     />
                 ))}
-                <Key width={65.4} value="DELETE" onClick={onClick}/>
+                <Key width={65.4} value="ENTER" onClick={onClick} />
                     
             </div>
         </div>
