@@ -1,0 +1,35 @@
+import React, { useState, useEffect } from 'react';
+import { SmallPopup } from './SmallPopup';
+import Image from 'next/image'
+
+function SupportButton() {
+    const [isOpen, setIsOpen] = useState(false);
+    function showInfoPopup() {
+        setIsOpen(true);
+    }
+
+    function togglePopup() {
+        setIsOpen(!isOpen);
+    }
+
+    return (
+        <span>
+            <span className="right-button">
+            <Image className="icon" height={30} width={30} src='/heart.png' alt="heart-img" onClick={showInfoPopup} />
+            </span>
+            {isOpen && <SmallPopup
+                content={<>
+                    <h2 className="popup-title"><b>Support</b></h2><div className="popup-text">
+                    <hr className="bar" />
+                    <p>If you have any suggestions, feel free to email at biancadehaan77@gmail.com</p>
+                    </div>
+                </>}
+                handleClose={togglePopup}
+
+            />}
+        </span>
+    )
+
+}
+
+export { SupportButton }

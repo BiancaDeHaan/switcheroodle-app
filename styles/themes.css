@@ -1,0 +1,24 @@
+
+  .dark-theme {
+    --header-text: white;
+    --background: #282c34;
+    --dark-background: darkslategray;
+    --shade-background: #00000050;
+    --keyboard-unpressed: lightgray;
+    --keyboard-pressed: darkgray;
+    --pop-up-title: lavender;
+    --box-outline: gray;
+    --close-icon: #aaa;
+  }
+
+.light-theme {
+    --header-text: black;
+    --background: white;
+    --dark-background: darkslategray;
+    --shade-background: #00000050;
+    --keyboard-unpressed: purple;
+    --keyboard-pressed: darkgray;
+    --pop-up-title: purple;
+    --box-outline: gray;
+    --close-icon: #aaa;
+  }
