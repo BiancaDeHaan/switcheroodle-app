@@ -58,6 +58,7 @@ function Game() {
     useEffect(() => {
         window.addEventListener('resize', handleWindowSizeChange);
         handleWindowSizeChange();
+        localStorage.removeItem('time-reset');
 
         var now = new Date();
         var resetTime = localStorage.getItem('reset-time');
@@ -93,6 +94,8 @@ function Game() {
             now.setUTCHours(24, 0, 0, 0);
             localStorage.setItem('reset-time', JSON.stringify(now));
             handleFetchPosts("", "");
+            localStorage.setItem('history', JSON.stringify([]));
+
         }
 
         return () => {
