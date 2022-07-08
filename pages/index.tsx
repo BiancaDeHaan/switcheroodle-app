@@ -8,8 +8,9 @@ const Home: NextPage = () => {
   return (
     <div className={`${styles.container}`} >
       <Head>
-        <title>Switcheroodle</title>
-        <meta name="description" content="A twist on the classic Wordle" />
+        <title>Switcheroodle | Puzzle game</title>
+        <meta name="description" content="A puzzle that is a twist on the classic Wordle. Swap letters to play and solve the puzzle!" />
+        <meta name="robots" content="all" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Game/>
