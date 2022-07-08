@@ -12,6 +12,7 @@ import Image from 'next/image'
 import submitbutton from '../public/submit.png'
 import {ShareButton} from './buttons/ShareButton';
 import { DeleteButton } from './buttons/DeleteButton';
+import { HintButton } from './buttons/HintButton';
 
 type WordsData = {
     words: string[];
@@ -252,6 +253,7 @@ function Game() {
             </div>
             <hr className="bar" />
             <div className="user-input-row">
+            <HintButton current={currentWord} words={validWords.words}/>
             <Word word={currentGuess} />
             <DeleteButton onClick={clearCurrent}/>
             </div>

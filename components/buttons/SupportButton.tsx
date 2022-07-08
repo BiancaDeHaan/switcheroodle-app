@@ -6,6 +6,7 @@ function SupportButton() {
     const emailAddress='biancadehaan77@gmail.com'
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [copied, setCopied] = useState<boolean>(false);
+    
     function showInfoPopup() {
         setIsOpen(true);
     }

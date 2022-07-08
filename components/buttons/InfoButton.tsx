@@ -13,9 +13,11 @@ function InfoButton() {
         setIsOpen(!isOpen);
     }
 
+    
+
     return (
         <span> <span className="left-button icon-size">
-            <Image className="icon" height={30} width={30} src='/info.png' alt="stat-img" onClick={showInfoPopup} />
+            <Image className="icon" height={30} width={30} src='/info.png' alt="info-img" onClick={showInfoPopup} />
             </span>
             <div>
             {isOpen && <SmallPopup

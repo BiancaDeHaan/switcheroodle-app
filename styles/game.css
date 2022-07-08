@@ -44,7 +44,6 @@
   .user-input-row {
     display: flex;
     justify-content: center;
-    padding-left:40px;
   align-items: center;
   }
 
@@ -82,7 +81,6 @@
   .user-input-row {
     display: flex;
     justify-content: center;
-    padding-left:25px;
   align-items: center;
   }
 

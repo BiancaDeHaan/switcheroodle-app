@@ -6,8 +6,10 @@ interface DeleteProps {
 
 function DeleteButton(props: DeleteProps) {
     return (
-        <span className="icon-size delete-button">
-        <Image className="icon" height={30} width={30} src='/del.png' alt="del-img" onClick={props.onClick} />
+        <span>
+        <span className="icon-size">
+        <Image className="icon" height={30} width={30} src='/del2.png' alt="del-img" onClick={props.onClick} />
+        </span>
         </span>
 
     )
