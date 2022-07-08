@@ -60,7 +60,7 @@ function Game() {
         handleWindowSizeChange();
 
         var now = new Date();
-        var resetTime = localStorage.getItem('time-reset');
+        var resetTime = localStorage.getItem('reset-time');
         // They've visited the website before
         if (resetTime !== null) {
             if (now > new Date(JSON.parse(resetTime))) {
@@ -70,7 +70,7 @@ function Game() {
                 localStorage.setItem('goal-word', "");
                 localStorage.setItem('game-over', JSON.stringify(false));
                 now.setUTCHours(24, 0, 0, 0);
-                localStorage.setItem('time-reset', JSON.stringify(now));
+                localStorage.setItem('reset-time', JSON.stringify(now));
                 handleFetchPosts("", "");
             } else {
                 // Don't reset yet
@@ -91,7 +91,7 @@ function Game() {
         } else {
             // They've never visited the website
             now.setUTCHours(24, 0, 0, 0);
-            localStorage.setItem('time-reset', JSON.stringify(now));
+            localStorage.setItem('reset-time', JSON.stringify(now));
             handleFetchPosts("", "");
         }
 
